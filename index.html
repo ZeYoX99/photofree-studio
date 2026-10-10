@@ -280,7 +280,7 @@ input[type=range]{accent-color:#4c9aff}
   </div>
   <div class="ps-menubar ps-image-menu">
     <span class="ps-menu-brand">PF</span>
-    <button data-ps-menu="Fichier">Fichier</button><button data-ps-menu="Édition">Édition</button><button data-ps-menu="Image">Image</button><button data-ps-menu="Calque">Calque</button><button data-ps-menu="Sélection">Sélection</button><button data-ps-menu="Filtre">Filtre</button><button data-ps-menu="Affichage">Affichage</button><span class="ps-menu-spacer"></span><span id="psDocInfo" class="ps-document-label">Aucun document</span>
+    <button data-ps-menu="Fichier">Fichier</button><button data-ps-menu="Édition">Édition</button><button data-ps-menu="Image">Image</button><button data-ps-menu="Calque">Calque</button><button data-ps-menu="Sélection">Sélection</button><button data-ps-menu="Filtre">Filtre</button><button data-ps-menu="Affichage">Affichage</button><button data-ps-menu="Texte">Texte</button><button data-ps-menu="Fenêtre">Fenêtre</button><button data-ps-menu="Plus">Plus</button><button data-ps-menu="Aide">Aide</button><span class="ps-menu-spacer"></span><span id="psDocInfo" class="ps-document-label">Aucun document</span>
   </div>
   <div class="ps-optionsbar ps-image-options">
     <span>Outil : <b id="psToolLabel">Déplacement</b></span><span class="ps-option-divider"></span>
@@ -310,7 +310,7 @@ input[type=range]{accent-color:#4c9aff}
       <div class="ps-statusbar"><span id="psStatus">Prêt</span><span id="psDimensions">—</span></div>
     </main>
     <aside class="ps-right-panel">
-      <div class="ps-panel-tabs"><button class="active" data-ps-tab="layers">Calques</button><button data-ps-tab="adjust">Réglages</button><button data-ps-tab="filters">Filtres</button></div>
+      <div class="ps-panel-tabs"><button class="active" data-ps-tab="layers">Calques</button><button data-ps-tab="adjust">Réglages</button><button data-ps-tab="filters">Filtres</button><button data-ps-tab="history">Historique</button></div>
       <div id="psLayersPanel" class="ps-panel-content">
         <div class="ps-panel-actions"><button id="psAddTextLayer">＋ Texte</button><button id="psAddBlankLayer">＋ Calque</button><button id="psDuplicateLayer">Dupliquer</button><button id="psDeleteLayer">Supprimer</button></div>
         <div id="psLayerList" class="ps-layer-list"><p class="muted small">Ouvre une image pour commencer.</p></div>
@@ -323,6 +323,7 @@ input[type=range]{accent-color:#4c9aff}
         <label class="suite-range">Flou <output id="imgBlurOut">0 px</output><input id="imgBlur" type="range" min="0" max="20" value="0"></label>
         <button id="psGrayscale">Noir et blanc</button><button id="psInvert">Inverser les couleurs</button><button id="psSepia">Sépia</button><button id="psResetAdjust">Réinitialiser les réglages</button>
       </div>
+      <div id="psHistoryPanel" class="ps-panel-content hidden"><h4>Historique</h4><p class="muted small">L’historique conserve les dernières opérations prises en charge. Utilise Annuler et Rétablir dans la barre supérieure.</p><button id="psHistoryUndo">↶ Annuler la dernière opération</button><button id="psHistoryRedo">↷ Rétablir l’opération</button><div class="notice">Les états sont limités pour préserver la mémoire du navigateur.</div></div>
       <div id="psFiltersPanel" class="ps-panel-content hidden">
         <h4>Filtres rapides</h4><button data-ps-filter="grayscale(1)">Noir et blanc</button><button data-ps-filter="sepia(1)">Sépia</button><button data-ps-filter="blur(2px)">Flou doux</button><button data-ps-filter="contrast(1.35) saturate(1.2)">Contraste +</button><button data-ps-filter="saturate(1.8)">Couleurs intenses</button><button data-ps-filter="brightness(1.12)">Éclaircir</button>
         <p class="muted small">Les filtres ci-dessus sont appliqués au rendu exporté. Les filtres IA et le remplissage génératif nécessitent un modèle ou un service externe.</p>

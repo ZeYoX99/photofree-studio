@@ -1,25 +1,19 @@
-# PhotoFree AI — version avec PhotoFree Photoshop renforcé
+# PhotoFree AI — interface Photoshop inspirée de Photopea
 
-## Installation sur GitHub Pages
-1. Téléverse `index.html`, `suite.css`, `suite.js` et `README.md` à la racine du dépôt.
-2. Remplace les fichiers de même nom si GitHub le demande.
-3. Valide le commit puis attends le redéploiement GitHub Pages.
-4. Ouvre le site et sélectionne **Photoshop** dans la navigation PhotoFree.
+## Installation GitHub Pages
+1. Téléversez `index.html`, `suite.css`, `suite.js` et `README.md` à la racine du dépôt.
+2. Remplacez les fichiers existants quand GitHub le demande.
+3. Faites **Commit changes** puis attendez la publication GitHub Pages.
 
-## Fonctions réellement implémentées dans PhotoFree Photoshop
-- Import d'image et création de document aux dimensions personnalisées.
-- Calques pixel, ajout/suppression/duplication, visibilité, renommage, opacité et modes de fusion courants.
-- Pinceau, gomme, formes rectangle/ellipse, texte, pipette et recadrage rectangulaire.
-- Réglages de luminosité, contraste, saturation et flou.
-- Filtres rapides noir et blanc, sépia, inversion, couleurs intenses, éclaircissement et contraste.
-- Historique Annuler/Rétablir pour les opérations qui enregistrent un instantané.
-- Zoom, export PNG/JPEG et sauvegarde/réouverture du projet `.photofree` avec ses calques.
-- Traitement local dans le navigateur pour les fichiers ouverts.
+## Fonctions réellement présentes dans le module Photoshop
+- Import d'une image, ajout d'image comme calque, nouveau document.
+- Calques raster : ajout, duplication, suppression, visibilité, renommage, opacité et modes de fusion pris en charge par Canvas.
+- Pinceau, gomme, texte rasterisé, rectangle, ellipse, pipette et recadrage rectangulaire.
+- Réglages de luminosité, contraste, saturation et flou, plus quelques filtres rapides.
+- Annuler/rétablir sur un historique limité, zoom, export PNG/JPEG et projet PhotoFree avec calques.
+- Menus Fichier, Édition, Image, Calque, Sélection, Filtre, Affichage, Texte, Fenêtre, Plus et Aide.
 
 ## Limites explicites
-Ce n'est pas une copie complète d'Adobe Photoshop. Cette version n'implémente pas encore les masques de fusion réels, la sélection intelligente, la plume vectorielle, les objets dynamiques, Camera Raw, les profils ICC, la pression du stylet, les filtres non destructifs ou l'IA générative. Les outils de texte et de forme créent des calques raster. Certains effets CSS de filtre sont appliqués au rendu global, pas en tant que calques de réglage éditables. L'application nécessite une connexion pour charger les bibliothèques externes PDF.js et pdf-lib utilisées par les espaces PDF.
+Ce projet n'est pas un clone complet de Photopea ou Adobe Photoshop. Les outils avancés tels que masques de fusion complets, sélection intelligente, plume Bézier, styles de calque, Camera Raw, objets dynamiques, gestion ICC et IA générative ne sont pas intégralement implémentés. Les contrôles disponibles ne doivent pas être interprétés comme une compatibilité PSD complète.
 
-## Dépendances
-- PDF.js 3.11.174 (CDN) pour le rendu PDF.
-- pdf-lib 1.17.1 (CDN) pour l'export PDF.
-- Aucun serveur ou clé API requis pour les outils locaux de retouche.
+Les bibliothèques PDF.js et pdf-lib sont chargées depuis des CDN pour les fonctions PDF; les fonctionnalités image de base fonctionnent localement dans le navigateur.
