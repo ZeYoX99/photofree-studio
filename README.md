@@ -1,33 +1,18 @@
-# PhotoFree AI — interface Photoshop inspirée de Photopea
+# PhotoFree Photoshop — interface professionnelle
 
-## Installation GitHub Pages
-1. Téléversez `index.html`, `suite.css`, `suite.js` et `README.md` à la racine du dépôt.
-2. Remplacez les fichiers existants quand GitHub le demande.
-3. Faites **Commit changes** puis attendez la publication GitHub Pages.
+Cette archive contient les fichiers du module PhotoFree Photoshop à déposer à la racine du dépôt GitHub Pages : `index.html`, `suite.css`, `suite.js` et `README.md`.
 
-## Fonctions réellement présentes dans le module Photoshop
-- Import d'une image, ajout d'image comme calque, nouveau document.
-- Calques raster : ajout, duplication, suppression, visibilité, renommage, opacité et modes de fusion pris en charge par Canvas.
-- Pinceau, gomme, texte rasterisé, rectangle, ellipse, pipette et recadrage rectangulaire.
-- Réglages de luminosité, contraste, saturation et flou, plus quelques filtres rapides.
-- Annuler/rétablir sur un historique limité, zoom, export PNG/JPEG et projet PhotoFree avec calques.
-- Menus Fichier, Édition, Image, Calque, Sélection, Filtre, Affichage, Texte, Fenêtre, Plus et Aide.
+## Installation
+1. Fais une copie de sauvegarde des fichiers existants.
+2. Remplace les quatre fichiers à la racine du dépôt avec ceux de cette archive.
+3. Fais un commit, attends le déploiement GitHub Pages et recharge le site avec Ctrl+Maj+R.
 
-## Interface Photoshop améliorée
-- Barre d'outils verticale compacte, inspirée de la disposition de Photopea.
-- Barre de menus et options plus denses, espace de travail central et panneau droit avec onglets Calques/Réglages/Filtres/Historique.
-- Les outils marqués d'un astérisque et grisés sont volontairement désactivés : ils ne sont pas encore implémentés.
+## Fonctionnalités effectivement disponibles
+- Importation d'images et création de documents raster.
+- Calques raster : ajouter, dupliquer, supprimer, renommer, visibilité, opacité et modes de fusion pris en charge par Canvas.
+- Pinceau, gomme, texte raster, formes simples, pipette, sélection de base, recadrage, zoom et déplacement.
+- Réglages de base, filtres rapides, annuler/rétablir, sauvegarde de projet PhotoFree, export PNG/JPEG.
+- Interface compacte avec menus, options contextuelles et panneaux Calques, Canaux, Tracés, Historique, Réglages et Filtres.
 
-## Limites explicites
-Ce projet n'est pas un clone complet de Photopea ou Adobe Photoshop. Les outils avancés tels que masques de fusion complets, sélection intelligente, plume Bézier, styles de calque, Camera Raw, objets dynamiques, gestion ICC et IA générative ne sont pas intégralement implémentés. Les contrôles disponibles ne doivent pas être interprétés comme une compatibilité PSD complète.
-
-Les bibliothèques PDF.js et pdf-lib sont chargées depuis des CDN pour les fonctions PDF; les fonctionnalités image de base fonctionnent localement dans le navigateur.
-
-
-## PhotoFree Photoshop — état de cette version
-
-Cette version enrichit l'éditeur web local avec une disposition inspirée des éditeurs professionnels, des panneaux Calques / Canaux / Tracés / Historique, ainsi que les outils de base : pinceau, gomme, texte raster, pipette, recadrage, sélection rectangulaire/elliptique, lasso de sélection, formes, ligne, dégradé et remplissage de calque. Les sélections rectangulaires, elliptiques et au lasso peuvent limiter le remplissage.
-
-**Limites explicites :** il ne s'agit pas d'un clone complet de Photopea. Les canaux sont informatifs, les tracés Bézier ne sont pas éditables, la baguette magique, le tampon/correcteur, les masques complets, les objets dynamiques, la compatibilité PSD native, les profils ICC avancés et les fonctions IA ne sont pas implémentés. Les calques de texte sont rasterisés au placement. Les menus exécutent seulement les commandes indiquées dans le code.
-
-L'application traite les images dans le navigateur. Les fonctions de base ne nécessitent pas de clé API.
+## Limites importantes
+L'interface reprend des conventions générales des éditeurs d'images professionnels, sans utiliser le nom ni le logo Photopea. Ce n'est pas une copie du code source de Photopea et ce n'est pas encore une réimplémentation complète de son moteur. Les outils désactivés portent une infobulle « À implémenter ». PSD/PSB, masques avancés, sélections intelligentes, plume Bézier, objets dynamiques, Camera Raw et IA générative ne sont pas implémentés.
