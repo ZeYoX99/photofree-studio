@@ -1,0 +1,132 @@
+
+.suite-switch{display:flex;gap:4px;align-items:center;flex-wrap:nowrap}
+.suite-mode{white-space:nowrap;font-size:11px;padding:6px 8px!important}
+.suite-mode.active{background:#6254df!important;border-color:#8b7cff!important}
+.suite-page{height:calc(100vh - 48px);background:#17181d;color:#eceef6;display:flex;flex-direction:column;min-height:0}
+.suite-page.hidden{display:none!important}
+body.mode-pdf .ps-menubar,body.mode-pdf .ps-optionsbar,body.mode-pdf #workspace,
+body.mode-image .ps-menubar,body.mode-image .ps-optionsbar,body.mode-image #workspace{display:none!important}
+body.mode-pdf .topbar,body.mode-image .topbar{height:48px}
+.suite-toolbar{height:auto;min-height:46px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:8px 12px;background:#202127;border-bottom:1px solid #393b45}
+.suite-toolbar strong{margin-right:8px}
+.suite-file{position:relative;display:inline-flex;align-items:center;padding:7px 10px;border:1px solid #444858;border-radius:6px;background:#292d3a;cursor:pointer;color:#eee}
+.suite-file input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.pdf-layout,.image-layout{flex:1;min-height:0;display:grid;grid-template-columns:210px minmax(0,1fr) 270px;gap:1px;background:#090a0d}
+.suite-side{background:#202127;overflow:auto;padding:13px;min-width:0}
+.suite-side h3{font-size:13px;margin:0 0 12px}
+.suite-side button{display:block;width:100%;margin:7px 0;text-align:left}
+.pdf-stage,.image-stage{background:#15161b;display:flex;align-items:center;justify-content:center;overflow:auto;position:relative;padding:18px;min-width:0}
+.suite-empty{text-align:center;color:#aeb2c1;max-width:360px}
+.suite-empty h2{font-size:20px;color:#f1f2f8}
+.pdf-canvas-wrap{position:relative;max-width:100%;box-shadow:0 6px 25px #0009;line-height:0}
+#pdfCanvas{display:block;max-width:100%;height:auto}
+#pdfAnnotations{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.pdf-annotation{position:absolute;color:#111;background:#fff9;white-space:pre-wrap;font:16px Arial,sans-serif;line-height:1.3;padding:2px;pointer-events:none;max-width:90%}
+.pdf-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pdf-thumb{background:#30323b;border:1px solid #464956;border-radius:5px;padding:5px;cursor:pointer;color:#ddd;text-align:center}
+.pdf-thumb.active{border-color:#8b7cff}
+.pdf-thumb canvas{width:100%;height:auto;background:white;display:block;margin-bottom:4px}
+.ai-side textarea{width:100%;resize:vertical;margin:8px 0}
+.ai-suggestions{display:grid;gap:5px}.ai-suggestions button{font-size:11px}
+.ai-output{white-space:pre-wrap;line-height:1.55;background:#171a22;border:1px solid #353a49;border-radius:6px;padding:10px;margin-top:10px;overflow-wrap:anywhere}
+.image-stage canvas{max-width:100%;max-height:100%;height:auto;object-fit:contain;box-shadow:0 4px 24px #0008}
+.image-layout .suite-side>button{display:block;width:100%;margin:7px 0}
+.suite-range{display:flex;flex-direction:column;gap:7px;margin:16px 0;color:#cbd0df}
+.suite-range output{color:#a99eff;font-size:11px}
+.suite-range input[type=range]{width:100%}
+.suite-range input[type=text],.suite-range input[type=number]{width:100%}
+@media(max-width:900px){.pdf-layout,.image-layout{grid-template-columns:150px minmax(0,1fr)}.ai-side,.image-layout>.suite-side:last-child{grid-column:1 / -1;max-height:260px}.suite-page{height:auto;min-height:calc(100vh - 48px)}.pdf-stage,.image-stage{min-height:55vh}}
+@media(max-width:620px){.suite-switch{order:4;flex-basis:100%;overflow-x:auto}.suite-mode{flex:1}.suite-toolbar{align-items:stretch}.suite-toolbar>*{max-width:100%}.pdf-layout,.image-layout{display:flex;flex-direction:column}.suite-side{max-height:220px}.pdf-stage,.image-stage{min-height:48vh}.pdf-thumbs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+
+/* PhotoFree Photoshop workspace — denser Photopea-inspired layout */
+body.mode-image .topbar{height:42px;min-height:42px;gap:7px;padding:0 8px}
+body.mode-image .brand{min-width:142px;font-size:13px}
+body.mode-image .logo{width:24px;height:24px;border-radius:3px}
+body.mode-image .suite-mode{padding:5px 7px!important;font-size:11px}
+body.mode-image #projectName{width:150px;padding:5px 7px}
+body.mode-image .top-actions{gap:4px}
+body.mode-image .top-actions button,body.mode-image .top-right button{padding:5px 7px;font-size:11px}
+body.mode-image .privacy{display:none}
+body.mode-image .ps-image-menu{height:30px;min-height:30px;flex-wrap:nowrap;gap:1px;padding:0 6px;background:#414141;border-bottom:1px solid #242424}
+body.mode-image .ps-image-menu button{height:28px;padding:3px 9px;border:0;border-radius:2px;background:transparent;color:#eee;font-size:12px}
+body.mode-image .ps-image-menu button:hover{background:#555}
+body.mode-image .ps-menu-brand{font-weight:800;color:#8cc4ff;padding:0 8px}
+body.mode-image .ps-image-options{height:34px;min-height:34px;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:3px 8px;background:#333;border-bottom:1px solid #111;font-size:11px}
+body.mode-image .ps-image-options button{padding:4px 7px;border-radius:3px}
+body.mode-image .ps-editor-layout{height:calc(100vh - 106px);min-height:0;grid-template-columns:42px minmax(250px,1fr) 278px;gap:1px;background:#171717}
+body.mode-image .ps-tools-panel{display:flex;flex-direction:column;align-items:stretch;gap:1px;padding:4px 3px;background:#414141;overflow-y:auto;overflow-x:hidden}
+body.mode-image .ps-tool{flex:0 0 35px;width:35px;height:35px;min-height:35px;gap:0;padding:0;border:1px solid transparent;border-radius:2px;background:transparent;color:#f2f2f2;font-size:17px}
+body.mode-image .ps-tool small{display:none}
+body.mode-image .ps-tool:hover{background:#555}
+body.mode-image .ps-tool.active{background:#5a5a5a;border-color:#777}
+body.mode-image .ps-tool-unavailable{opacity:.35}
+body.mode-image .ps-tools-divider{height:1px;background:#666;margin:4px 5px;flex:none}
+body.mode-image .ps-color-swatches{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:5px}
+body.mode-image .ps-color-swatches input{width:23px;height:23px;padding:0;border:1px solid #ddd;border-radius:0}
+body.mode-image .ps-canvas-stage{background:#292929}
+body.mode-image .ps-canvas-head,body.mode-image .ps-statusbar{min-height:25px;padding:3px 7px;background:#383838;color:#ddd;font-size:11px}
+body.mode-image #psCanvasViewport{background-color:#292929;background-image:linear-gradient(45deg,#333 25%,transparent 25%),linear-gradient(-45deg,#333 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#333 75%),linear-gradient(-45deg,transparent 75%,#333 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}
+body.mode-image .ps-right-panel{background:#414141;border-left:1px solid #202020}
+body.mode-image .ps-panel-tabs{display:flex;gap:0;min-height:31px;background:#373737;border-bottom:1px solid #222}
+body.mode-image .ps-panel-tabs button{flex:1;padding:6px 3px;background:transparent;border:0;border-right:1px solid #282828;border-radius:0;font-size:11px}
+body.mode-image .ps-panel-tabs button.active{background:#4b4b4b;border-bottom:2px solid #83bfff}
+body.mode-image .ps-panel-content{padding:8px;background:#414141;overflow:auto}
+body.mode-image .ps-panel-actions{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:8px}
+body.mode-image .ps-panel-actions button{padding:6px 4px;font-size:11px;border-radius:2px}
+body.mode-image .ps-layer-properties{border-top:1px solid #555;margin-top:10px;padding-top:8px}
+body.mode-image .ps-layer-properties label{display:flex;flex-direction:column;align-items:stretch;gap:4px;margin:9px 0;font-size:11px}
+body.mode-image .ps-layer-properties input,body.mode-image .ps-layer-properties select{width:100%;background:#292929;border-color:#555;border-radius:2px}
+body.mode-image .ps-layer-list{min-height:100px}
+body.mode-image .ps-layer-item{border-radius:2px!important}
+body.mode-image .suite-file{border-radius:2px}
+body.mode-image .suite-empty h2{font-size:19px}
+@media(max-width:850px){
+ body.mode-image .brand{min-width:auto}
+ body.mode-image .privacy,body.mode-image .top-right{display:none}
+ body.mode-image .ps-editor-layout{grid-template-columns:40px minmax(180px,1fr) 220px}
+ body.mode-image .ps-image-options{overflow-x:auto}
+}
+
+/* Additional PhotoFree Photoshop panels and compact pro layout */
+body.mode-image .ps-panel-tabs{overflow-x:auto;flex-wrap:nowrap}
+body.mode-image .ps-panel-tabs button{flex:0 0 auto;min-width:48px;white-space:nowrap}
+body.mode-image .ps-channel-row{padding:8px 6px;border:1px solid #555;background:#353535;margin:4px 0;font-size:12px;color:#eee}
+body.mode-image .ps-tool[data-ps-tool="line"],body.mode-image .ps-tool[data-ps-tool="gradient"],body.mode-image .ps-tool[data-ps-tool="fill"]{font-weight:700}
+body.mode-image .ps-image-menu{position:relative;z-index:5}
+body.mode-image .ps-image-menu button:focus-visible,body.mode-image .ps-tool:focus-visible{outline:1px solid #8cc4ff;outline-offset:-1px}
+
+/* PhotoFree Photoshop — compact desktop workspace inspired by professional raster editors */
+body.mode-image .suite-toolbar.ps-toolbar-rich{min-height:31px;height:31px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:4px;padding:2px 6px;background:#383838;border-bottom:1px solid #171717;scrollbar-width:thin}
+body.mode-image .suite-toolbar.ps-toolbar-rich strong{display:none}
+body.mode-image .suite-toolbar.ps-toolbar-rich .suite-file,body.mode-image .suite-toolbar.ps-toolbar-rich button{flex:none;white-space:nowrap;height:25px;padding:3px 8px;font-size:11px;border-radius:2px;background:#444;border:1px solid #555;color:#eee}
+body.mode-image .suite-toolbar.ps-toolbar-rich .primary{background:#4a6481;border-color:#6587a8}
+body.mode-image .ps-image-menu{background:#414141;color:#eee}
+body.mode-image .ps-image-menu button{font-size:12px;padding-left:9px;padding-right:9px}
+body.mode-image .ps-image-options{background:#353535}
+body.mode-image .ps-editor-layout{height:calc(100vh - 137px);min-height:390px;grid-template-columns:40px minmax(250px,1fr) 282px}
+body.mode-image .ps-tools-panel{gap:0;padding:3px 2px}
+body.mode-image .ps-tool{flex:0 0 31px;width:35px;height:31px;min-height:31px;font-family:Arial,sans-serif;font-size:17px;line-height:1}
+body.mode-image .ps-tool-unavailable{opacity:.34;filter:grayscale(1);cursor:not-allowed}
+body.mode-image .ps-tool-unavailable:disabled:hover{background:transparent}
+body.mode-image .ps-color-swatches{margin-top:auto;padding:5px 0 3px}
+body.mode-image .ps-layer-item{display:grid;grid-template-columns:18px 42px minmax(0,1fr);align-items:center;gap:5px;min-height:47px;padding:4px 5px!important;background:#494949;border:1px solid #606060;color:#eee}
+body.mode-image .ps-layer-item.active{background:#5a6d7b!important;border-color:#91bde0!important}
+body.mode-image .ps-layer-item canvas,body.mode-image .ps-layer-item img{width:38px;height:34px;object-fit:contain;background-color:#2c2c2c;background-image:linear-gradient(45deg,#444 25%,transparent 25%),linear-gradient(-45deg,#444 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#444 75%),linear-gradient(-45deg,transparent 75%,#444 75%);background-size:8px 8px}
+body.mode-image .ps-layer-properties input,body.mode-image .ps-layer-properties select{font-size:12px}
+body.mode-image .ps-statusbar{justify-content:space-between}
+body.mode-image .ps-canvas-stage{min-width:0}
+body.mode-image #psCanvasViewport{overflow:auto;align-content:center;justify-content:center}
+@media(max-width:850px){body.mode-image .ps-editor-layout{height:auto;min-height:620px;grid-template-columns:40px minmax(180px,1fr) 220px}body.mode-image .ps-tools-panel{grid-column:1;grid-row:1}body.mode-image .ps-right-panel{grid-column:3;grid-row:1}}
+@media(max-width:650px){body.mode-image .ps-editor-layout{grid-template-columns:38px minmax(150px,1fr)}body.mode-image .ps-right-panel{grid-column:2;grid-row:2;min-height:300px}body.mode-image .ps-canvas-stage{min-height:380px}}
+
+/* PhotoFree professional command menus */
+.ps-command-menu{position:fixed;z-index:100000;min-width:245px;max-width:320px;max-height:80vh;overflow:auto;padding:4px;background:#f1f1f1;color:#222;border:1px solid #777;box-shadow:0 8px 24px #0008;font:13px Arial,sans-serif}
+.ps-dropdown-item{display:block;width:100%;border:0!important;border-radius:2px!important;background:transparent!important;color:#222!important;text-align:left!important;padding:7px 12px!important;margin:0!important;min-height:27px;white-space:nowrap;font:13px Arial,sans-serif!important}
+.ps-dropdown-item:hover:not(:disabled){background:#d7e8ff!important;color:#111!important}
+.ps-dropdown-item:disabled{opacity:.4;cursor:default}
+.ps-dropdown-divider{height:1px;background:#c9c9c9;margin:4px 6px}
+.ps-menubar [data-ps-menu]{border-radius:2px!important}
+.ps-menubar [data-ps-menu]:hover{background:#555!important}
+.ps-layer-item{min-height:52px}
+.ps-layer-thumb{background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 50%/10px 10px;border:1px solid #777;object-fit:contain}
