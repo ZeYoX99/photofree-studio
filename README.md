@@ -13,6 +13,11 @@
 - Annuler/rétablir sur un historique limité, zoom, export PNG/JPEG et projet PhotoFree avec calques.
 - Menus Fichier, Édition, Image, Calque, Sélection, Filtre, Affichage, Texte, Fenêtre, Plus et Aide.
 
+## Interface Photoshop améliorée
+- Barre d'outils verticale compacte, inspirée de la disposition de Photopea.
+- Barre de menus et options plus denses, espace de travail central et panneau droit avec onglets Calques/Réglages/Filtres/Historique.
+- Les outils marqués d'un astérisque et grisés sont volontairement désactivés : ils ne sont pas encore implémentés.
+
 ## Limites explicites
 Ce projet n'est pas un clone complet de Photopea ou Adobe Photoshop. Les outils avancés tels que masques de fusion complets, sélection intelligente, plume Bézier, styles de calque, Camera Raw, objets dynamiques, gestion ICC et IA générative ne sont pas intégralement implémentés. Les contrôles disponibles ne doivent pas être interprétés comme une compatibilité PSD complète.
 

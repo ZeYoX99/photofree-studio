@@ -37,3 +37,53 @@ body.mode-pdf .topbar,body.mode-image .topbar{height:48px}
 .suite-range input[type=text],.suite-range input[type=number]{width:100%}
 @media(max-width:900px){.pdf-layout,.image-layout{grid-template-columns:150px minmax(0,1fr)}.ai-side,.image-layout>.suite-side:last-child{grid-column:1 / -1;max-height:260px}.suite-page{height:auto;min-height:calc(100vh - 48px)}.pdf-stage,.image-stage{min-height:55vh}}
 @media(max-width:620px){.suite-switch{order:4;flex-basis:100%;overflow-x:auto}.suite-mode{flex:1}.suite-toolbar{align-items:stretch}.suite-toolbar>*{max-width:100%}.pdf-layout,.image-layout{display:flex;flex-direction:column}.suite-side{max-height:220px}.pdf-stage,.image-stage{min-height:48vh}.pdf-thumbs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+
+/* PhotoFree Photoshop workspace — denser Photopea-inspired layout */
+body.mode-image .topbar{height:42px;min-height:42px;gap:7px;padding:0 8px}
+body.mode-image .brand{min-width:142px;font-size:13px}
+body.mode-image .logo{width:24px;height:24px;border-radius:3px}
+body.mode-image .suite-mode{padding:5px 7px!important;font-size:11px}
+body.mode-image #projectName{width:150px;padding:5px 7px}
+body.mode-image .top-actions{gap:4px}
+body.mode-image .top-actions button,body.mode-image .top-right button{padding:5px 7px;font-size:11px}
+body.mode-image .privacy{display:none}
+body.mode-image .ps-image-menu{height:30px;min-height:30px;flex-wrap:nowrap;gap:1px;padding:0 6px;background:#414141;border-bottom:1px solid #242424}
+body.mode-image .ps-image-menu button{height:28px;padding:3px 9px;border:0;border-radius:2px;background:transparent;color:#eee;font-size:12px}
+body.mode-image .ps-image-menu button:hover{background:#555}
+body.mode-image .ps-menu-brand{font-weight:800;color:#8cc4ff;padding:0 8px}
+body.mode-image .ps-image-options{height:34px;min-height:34px;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:3px 8px;background:#333;border-bottom:1px solid #111;font-size:11px}
+body.mode-image .ps-image-options button{padding:4px 7px;border-radius:3px}
+body.mode-image .ps-editor-layout{height:calc(100vh - 106px);min-height:0;grid-template-columns:42px minmax(250px,1fr) 278px;gap:1px;background:#171717}
+body.mode-image .ps-tools-panel{display:flex;flex-direction:column;align-items:stretch;gap:1px;padding:4px 3px;background:#414141;overflow-y:auto;overflow-x:hidden}
+body.mode-image .ps-tool{flex:0 0 35px;width:35px;height:35px;min-height:35px;gap:0;padding:0;border:1px solid transparent;border-radius:2px;background:transparent;color:#f2f2f2;font-size:17px}
+body.mode-image .ps-tool small{display:none}
+body.mode-image .ps-tool:hover{background:#555}
+body.mode-image .ps-tool.active{background:#5a5a5a;border-color:#777}
+body.mode-image .ps-tool-unavailable{opacity:.35}
+body.mode-image .ps-tools-divider{height:1px;background:#666;margin:4px 5px;flex:none}
+body.mode-image .ps-color-swatches{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:5px}
+body.mode-image .ps-color-swatches input{width:23px;height:23px;padding:0;border:1px solid #ddd;border-radius:0}
+body.mode-image .ps-canvas-stage{background:#292929}
+body.mode-image .ps-canvas-head,body.mode-image .ps-statusbar{min-height:25px;padding:3px 7px;background:#383838;color:#ddd;font-size:11px}
+body.mode-image #psCanvasViewport{background-color:#292929;background-image:linear-gradient(45deg,#333 25%,transparent 25%),linear-gradient(-45deg,#333 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#333 75%),linear-gradient(-45deg,transparent 75%,#333 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}
+body.mode-image .ps-right-panel{background:#414141;border-left:1px solid #202020}
+body.mode-image .ps-panel-tabs{display:flex;gap:0;min-height:31px;background:#373737;border-bottom:1px solid #222}
+body.mode-image .ps-panel-tabs button{flex:1;padding:6px 3px;background:transparent;border:0;border-right:1px solid #282828;border-radius:0;font-size:11px}
+body.mode-image .ps-panel-tabs button.active{background:#4b4b4b;border-bottom:2px solid #83bfff}
+body.mode-image .ps-panel-content{padding:8px;background:#414141;overflow:auto}
+body.mode-image .ps-panel-actions{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:8px}
+body.mode-image .ps-panel-actions button{padding:6px 4px;font-size:11px;border-radius:2px}
+body.mode-image .ps-layer-properties{border-top:1px solid #555;margin-top:10px;padding-top:8px}
+body.mode-image .ps-layer-properties label{display:flex;flex-direction:column;align-items:stretch;gap:4px;margin:9px 0;font-size:11px}
+body.mode-image .ps-layer-properties input,body.mode-image .ps-layer-properties select{width:100%;background:#292929;border-color:#555;border-radius:2px}
+body.mode-image .ps-layer-list{min-height:100px}
+body.mode-image .ps-layer-item{border-radius:2px!important}
+body.mode-image .suite-file{border-radius:2px}
+body.mode-image .suite-empty h2{font-size:19px}
+@media(max-width:850px){
+ body.mode-image .brand{min-width:auto}
+ body.mode-image .privacy,body.mode-image .top-right{display:none}
+ body.mode-image .ps-editor-layout{grid-template-columns:40px minmax(180px,1fr) 220px}
+ body.mode-image .ps-image-options{overflow-x:auto}
+}

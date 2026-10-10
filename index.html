@@ -292,16 +292,25 @@ input[type=range]{accent-color:#4c9aff}
     <button id="psApplyCrop">Appliquer recadrage</button><button id="psDeselect">Désélectionner</button>
   </div>
   <div class="ps-editor-layout">
-    <aside class="ps-tools-panel">
+    <aside class="ps-tools-panel" aria-label="Outils Photoshop">
       <button class="ps-tool active" data-ps-tool="move" title="Déplacement (V)">↖<small>Déplacer</small></button>
+      <button class="ps-tool" data-ps-tool="rect" title="Rectangle de sélection — outil de sélection simple">▭<small>Sélection</small></button>
+      <button class="ps-tool" data-ps-tool="ellipse" title="Sélection elliptique / ellipse">◯<small>Ellipse</small></button>
+      <button class="ps-tool" data-ps-tool="crop" title="Recadrage (C)">⌗<small>Recadrer</small></button>
+      <button class="ps-tool" data-ps-tool="eyedropper" title="Pipette (I)">◉<small>Pipette</small></button>
       <button class="ps-tool" data-ps-tool="brush" title="Pinceau (B)">🖌<small>Pinceau</small></button>
       <button class="ps-tool" data-ps-tool="eraser" title="Gomme (E)">▰<small>Gomme</small></button>
       <button class="ps-tool" data-ps-tool="text" title="Texte (T)">T<small>Texte</small></button>
-      <button class="ps-tool" data-ps-tool="rect" title="Rectangle">▱<small>Rectangle</small></button>
-      <button class="ps-tool" data-ps-tool="ellipse" title="Ellipse">◯<small>Ellipse</small></button>
-      <button class="ps-tool" data-ps-tool="crop" title="Recadrage (C)">⌗<small>Recadrer</small></button>
-      <button class="ps-tool" data-ps-tool="eyedropper" title="Pipette (I)">◉<small>Pipette</small></button>
+      <button class="ps-tool" data-ps-tool="rect" title="Outil rectangle">▱<small>Rectangle</small></button>
+      <button class="ps-tool" data-ps-tool="ellipse" title="Outil ellipse">○<small>Forme ellipse</small></button>
       <button class="ps-tool" data-ps-tool="hand" title="Main (H)">✋<small>Main</small></button>
+      <button class="ps-tool" data-ps-tool="zoom" title="Zoom (Z)">⌕<small>Zoom</small></button>
+      <div class="ps-tools-divider"></div>
+      <button class="ps-tool ps-tool-unavailable" type="button" disabled title="Non implémenté">⌁<small>Lasso*</small></button>
+      <button class="ps-tool ps-tool-unavailable" type="button" disabled title="Non implémenté">✧<small>Baguette*</small></button>
+      <button class="ps-tool ps-tool-unavailable" type="button" disabled title="Non implémenté">✒<small>Plume*</small></button>
+      <button class="ps-tool ps-tool-unavailable" type="button" disabled title="Non implémenté">◌<small>Correcteur*</small></button>
+      <div class="ps-color-swatches"><input id="psForeground" type="color" value="#000000" title="Couleur de premier plan"><input id="psBackground" type="color" value="#ffffff" title="Couleur d’arrière-plan"></div>
     </aside>
     <main class="ps-canvas-stage">
       <div class="ps-canvas-head"><span id="psCanvasTitle">Document sans titre</span><span><button id="psZoomOut">−</button><span id="psZoomLabel">100%</span><button id="psZoomIn">＋</button><button id="psFit">Ajuster</button></span></div>
