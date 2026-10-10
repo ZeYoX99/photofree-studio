@@ -271,7 +271,7 @@ input[type=range]{accent-color:#4c9aff}
 <section id="imageMode" class="suite-page hidden photoshop-app" aria-label="PhotoFree Photoshop">
   <div class="suite-toolbar ps-toolbar-rich">
     <strong>PhotoFree Photoshop</strong>
-    <label class="suite-file">Ouvrir une image <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif"></label>
+    <label class="suite-file">Ouvrir une image <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple></label>
     <button id="psNewDoc">Nouveau</button><button id="psAddImage">Ajouter image</button>
     <button id="imgUndo">↶ Annuler</button><button id="imgRedo">↷ Rétablir</button>
     <button id="imgReset">Réinitialiser</button>
@@ -322,7 +322,7 @@ input[type=range]{accent-color:#4c9aff}
     </aside>
     <main class="ps-canvas-stage">
       <div class="ps-canvas-head"><span id="psCanvasTitle">Document sans titre</span><span><button id="psZoomOut">−</button><span id="psZoomLabel">100%</span><button id="psZoomIn">＋</button><button id="psFit">Ajuster</button></span></div>
-      <div id="imageEmpty" class="suite-empty">🖼️<h2>Commence par ouvrir une image</h2><p>Ou crée un nouveau document transparent. Les fichiers sont traités localement dans ton navigateur.</p><label class="suite-file">Choisir une image <input type="file" accept="image/*" id="imageInputEmpty"></label></div>
+      <div id="imageEmpty" class="suite-empty">🖼️<h2>Commence par ouvrir une image</h2><p>Ou crée un nouveau document transparent. Les fichiers sont traités localement dans ton navigateur.</p><label class="suite-file">Choisir une image <input type="file" accept="image/*" id="imageInputEmpty" multiple></label></div>
       <div id="psCanvasViewport"><canvas id="imageCanvas" class="hidden"></canvas><canvas id="psOverlay" class="hidden"></canvas></div>
       <div class="ps-statusbar"><span id="psStatus">Prêt</span><span id="psDimensions">—</span></div>
     </main>
@@ -349,7 +349,7 @@ input[type=range]{accent-color:#4c9aff}
       </div>
     </aside>
   </div>
-  <input id="psAddImageInput" type="file" accept="image/*" class="hidden">
+  <input id="psAddImageInput" type="file" accept="image/*" class="hidden" multiple>
 </section>
 <div id="modalRoot"></div>
 <video id="videoSource" class="hidden" playsinline preload="auto"></video>

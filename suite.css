@@ -119,3 +119,14 @@ body.mode-image .ps-canvas-stage{min-width:0}
 body.mode-image #psCanvasViewport{overflow:auto;align-content:center;justify-content:center}
 @media(max-width:850px){body.mode-image .ps-editor-layout{height:auto;min-height:620px;grid-template-columns:40px minmax(180px,1fr) 220px}body.mode-image .ps-tools-panel{grid-column:1;grid-row:1}body.mode-image .ps-right-panel{grid-column:3;grid-row:1}}
 @media(max-width:650px){body.mode-image .ps-editor-layout{grid-template-columns:38px minmax(150px,1fr)}body.mode-image .ps-right-panel{grid-column:2;grid-row:2;min-height:300px}body.mode-image .ps-canvas-stage{min-height:380px}}
+
+/* PhotoFree professional command menus */
+.ps-command-menu{position:fixed;z-index:100000;min-width:245px;max-width:320px;max-height:80vh;overflow:auto;padding:4px;background:#f1f1f1;color:#222;border:1px solid #777;box-shadow:0 8px 24px #0008;font:13px Arial,sans-serif}
+.ps-dropdown-item{display:block;width:100%;border:0!important;border-radius:2px!important;background:transparent!important;color:#222!important;text-align:left!important;padding:7px 12px!important;margin:0!important;min-height:27px;white-space:nowrap;font:13px Arial,sans-serif!important}
+.ps-dropdown-item:hover:not(:disabled){background:#d7e8ff!important;color:#111!important}
+.ps-dropdown-item:disabled{opacity:.4;cursor:default}
+.ps-dropdown-divider{height:1px;background:#c9c9c9;margin:4px 6px}
+.ps-menubar [data-ps-menu]{border-radius:2px!important}
+.ps-menubar [data-ps-menu]:hover{background:#555!important}
+.ps-layer-item{min-height:52px}
+.ps-layer-thumb{background:repeating-conic-gradient(#ddd 0 25%,#fff 0 50%) 50%/10px 10px;border:1px solid #777;object-fit:contain}
