@@ -22,3 +22,12 @@
 Ce projet n'est pas un clone complet de Photopea ou Adobe Photoshop. Les outils avancés tels que masques de fusion complets, sélection intelligente, plume Bézier, styles de calque, Camera Raw, objets dynamiques, gestion ICC et IA générative ne sont pas intégralement implémentés. Les contrôles disponibles ne doivent pas être interprétés comme une compatibilité PSD complète.
 
 Les bibliothèques PDF.js et pdf-lib sont chargées depuis des CDN pour les fonctions PDF; les fonctionnalités image de base fonctionnent localement dans le navigateur.
+
+
+## PhotoFree Photoshop — état de cette version
+
+Cette version enrichit l'éditeur web local avec une disposition inspirée des éditeurs professionnels, des panneaux Calques / Canaux / Tracés / Historique, ainsi que les outils de base : pinceau, gomme, texte raster, pipette, recadrage, sélection rectangulaire/elliptique, lasso de sélection, formes, ligne, dégradé et remplissage de calque. Les sélections rectangulaires, elliptiques et au lasso peuvent limiter le remplissage.
+
+**Limites explicites :** il ne s'agit pas d'un clone complet de Photopea. Les canaux sont informatifs, les tracés Bézier ne sont pas éditables, la baguette magique, le tampon/correcteur, les masques complets, les objets dynamiques, la compatibilité PSD native, les profils ICC avancés et les fonctions IA ne sont pas implémentés. Les calques de texte sont rasterisés au placement. Les menus exécutent seulement les commandes indiquées dans le code.
+
+L'application traite les images dans le navigateur. Les fonctions de base ne nécessitent pas de clé API.

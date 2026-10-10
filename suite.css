@@ -87,3 +87,11 @@ body.mode-image .suite-empty h2{font-size:19px}
  body.mode-image .ps-editor-layout{grid-template-columns:40px minmax(180px,1fr) 220px}
  body.mode-image .ps-image-options{overflow-x:auto}
 }
+
+/* Additional PhotoFree Photoshop panels and compact pro layout */
+body.mode-image .ps-panel-tabs{overflow-x:auto;flex-wrap:nowrap}
+body.mode-image .ps-panel-tabs button{flex:0 0 auto;min-width:48px;white-space:nowrap}
+body.mode-image .ps-channel-row{padding:8px 6px;border:1px solid #555;background:#353535;margin:4px 0;font-size:12px;color:#eee}
+body.mode-image .ps-tool[data-ps-tool="line"],body.mode-image .ps-tool[data-ps-tool="gradient"],body.mode-image .ps-tool[data-ps-tool="fill"]{font-weight:700}
+body.mode-image .ps-image-menu{position:relative;z-index:5}
+body.mode-image .ps-image-menu button:focus-visible,body.mode-image .ps-tool:focus-visible{outline:1px solid #8cc4ff;outline-offset:-1px}
